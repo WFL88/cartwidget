@@ -1,16 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
 import NavJS from './Componentes/Nav';
-import ContadorJS from './Componentes/Contador';
-import Catalogo from './Componentes/Catalogo';
+import ItemJS from './Componentes/Item';
+import ItemListJS from './Componentes/ItemList';
+import PromesaJSX from './Componentes/Promise';
+
 
 
 function App() {
   return (
    <>
     <NavJS />
-    <Catalogo />
-    <ContadorJS />
+    <PromesaJSX />
     </>
   )
 }

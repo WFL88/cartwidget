@@ -1,5 +1,12 @@
+import ItemJS from "./Item";
+import ItemListJS from "./ItemList";
+
 const Catalogo = ()=> {
-    return <p>Aqui aparecera el catalogo cuando este disponible</p>;
+    return (
+    <>
+    <p>catalogo</p>
+    </>
+    )
 }
 
 export default Catalogo;
