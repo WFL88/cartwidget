@@ -1,4 +1,6 @@
 import ItemJS from "./Item";
+import { useState } from "react";
+import { useEffect } from "react";
 
 const ItemListJS = ()=> {
     const productos = [
@@ -23,21 +25,33 @@ const ItemListJS = ()=> {
             priece: 890,
         },
     ]
+    let [ItemsS, setItemsS] = useState([]);
+
+
+    useEffect(()=>{
+        let promiseItemRender = new Promise((resolve, reject) =>{
+            setTimeout(()=>
+              {
+                 resolve(productos); 
+              }
+              ,2000)
+             
+            })
+     
+             promiseItemRender.then((respuesta)=>{
+        setItemsS(productos);
+        console.log(respuesta)
+    })
+    },[])
     
-    return (
-        <>
-        {productos.map( (producto) => {
-            return(
-                <>
-                 <ItemJS name={producto.name} stock={producto.stock} priece={producto.priece} />
-                </>
-            )
-           
-        })}
 
-        </>
-    )
 
+   return(
+    <>
+    <ItemJS ItemsS={ItemsS}/>
+    </>
+   )
+  
     
 }
 

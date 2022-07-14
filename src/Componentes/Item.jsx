@@ -1,19 +1,25 @@
 import ContadorJS from "./Contador";
 
-const ItemJS = ({name, stock, priece})=> {
+const ItemJS = ( props )=> {
+    
     return (
-        <>
-    <div className="card" style={{width: "18rem"}}>
-            <div className="card-body">
-            <h5 className="card-title">{name}</h5>
-            <p className="card-text">stock: {stock}</p>
-            <p className="card-priece">priece:$ {priece} </p>
-            <a href="#" className="btn btn-primary">Detalles</a>
-            <br></br>
-            <ContadorJS />
-        </div>
-    </div>
-        </>
+    <>
+     {
+        props.ItemsS.map(
+         (cadaItem) => 
+         <>
+         <br></br>
+         <p>Nombre del juego:{cadaItem.name}</p>
+         <p>Precio del juego:{cadaItem.priece}</p>   
+         <p>Stock del juego:{cadaItem.stock}</p>
+         <ContadorJS />
+         <br></br>
+         </>     
+         
+         )
+     }
+        
+    </>
     )
 }
 
