@@ -1,0 +1,24 @@
+[
+    {
+        "name": "juego 1",
+        "stock": "32",
+        "priece": "350",
+        "detalles": "juego de disparos"
+    },{
+        "name": "juego 2",
+        "stock": "43",
+        "priece": "321",
+        "detalles": "juego de aventura"
+    },{
+        "name": "juego 3",
+        "stock": "21",
+        "priece": "800",
+        "detalles": "juego de accion"
+    },{
+        "name": "juego 4",
+        "stock": "65",
+        "priece": "211",
+        "detalles": "juego de terror"
+    }
+    
+]
